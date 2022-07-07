@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0px;
+}
+body *{
+  display: flex;
+}
+app-main,.cover{
+  flex-direction: column;
+  width: 100%;
+}
+.header{
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.header p{
+  margin: 0px;
+  font-size: 30px;
+}
+.date{
+  height: 40px;
+}
+.table-head{
+  width: 100%;
+}
+.table-body,.table{
+  flex-direction: column;
+}
+.row{
+  flex-direction: row;
+  width: 100%;
+}
+.row>div{
+  border: solid 1px rgb(168, 168, 168);
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.row>div>span{
+  align-items: center;
+  cursor: pointer;
+}
+.dark-theme{
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 10%;
+}
+.cover{
+  z-index: 999;
+}

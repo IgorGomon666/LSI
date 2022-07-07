@@ -1,0 +1,23 @@
+<div class="cover" [style]="darkTheme">
+  <div class="header">
+    <p>Currency checker</p>
+    <input class="date" type="date" [max]="currentDate" [value]="currentDate" (change)="customDate($event)">
+  </div>
+  <p class="dark-theme" (click)="dark()">Dark-mode {{(darkMode)?"⚪":"⚫"}}</p>
+  <div class="table">
+    <div class="table-head">
+      <div class="row">
+        <div><p>Symbol waluty</p><span (click)="sort('code',symbolDirection);symbolDirection=!symbolDirection">{{(symbolDirection)?"↓":"↑"}}</span></div>
+        <div><p>Waluta</p><span (click)="sort('currency',walutaDirection);walutaDirection=!walutaDirection">{{(walutaDirection)?"↓":"↑"}}</span></div>
+        <div><p>Kurs waluty</p><span (click)="sort('mid',kursDirection);kursDirection=!kursDirection">{{(kursDirection)?"↓":"↑"}}</span></div>
+      </div>
+    </div>
+    <div class="table-body">
+      <div class="row" *ngFor="let item of ratesData">
+        <div><p>{{item.code}}</p></div>
+        <div><p>{{item.currency}}</p></div>
+        <div><p>{{item.mid}}</p></div>
+      </div>
+    </div>
+  </div>
+</div>
